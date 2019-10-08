@@ -1,0 +1,23 @@
+{
+  "name": "foyer/otphp",
+  "description": "otp generation cloned from `lelag/otphp`",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Foyer Dev",
+      "email": "foyer@foyerlive.com"
+    }
+  ],
+  "require": {},
+  "autoload": {
+    "psr-4": {
+      "OTPHP\\": "lib"
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.0.x-dev"
+    }
+  }
+}
