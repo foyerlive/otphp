@@ -27,12 +27,12 @@ add dependecy in `composer.json`
   }
 ],
 "require": {
-  "foyer/otphp": "dev-master"
+  "otphp": "dev-master"
 }
 ```
 
 then run composer to install dependecy
-`composer require foyer/otphp:dev-master`
+`composer require otphp:dev-master`
 
 ## Use
 

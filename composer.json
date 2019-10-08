@@ -1,5 +1,5 @@
 {
-  "name": "foyer/otphp",
+  "name": "otphp",
   "description": "otp generation cloned from `lelag/otphp`",
   "type": "library",
   "license": "MIT",
