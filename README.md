@@ -8,17 +8,31 @@ This is a port of the rotp ruby library available at https://github.com/mdp/rotp
 
 Note : This project has not been updated since it was created. If you need a PHP OTP library, you should check out the great fork by Spomky-Labs at https://github.com/Spomky-Labs/otphp which has been improved and is currently maintained.
 
-
 ## Quick overview of using One Time Passwords on your phone
 
-* OTP's involve a shared secret, stored both on the phone and the server
-* OTP's can be generated on a phone without internet connectivity(AT&T mode)
-* OTP's should always be used as a second factor of authentication(if your phone is lost, you account is still secured with a password)
-* Google Authenticator allows you to store multiple OTP secrets and provision those using a QR Code(no more typing in the secret)
+- OTP's involve a shared secret, stored both on the phone and the server
+- OTP's can be generated on a phone without internet connectivity(AT&T mode)
+- OTP's should always be used as a second factor of authentication(if your phone is lost, you account is still secured with a password)
+- Google Authenticator allows you to store multiple OTP secrets and provision those using a QR Code(no more typing in the secret)
 
 ## Installation
 
-   clone this repository and include lib/otphp.php in your project. 
+add dependecy in `composer.json`
+
+```json
+"repositories": [
+  {
+    "type": "vcs",
+    "url": "https://github.com/foyerlive/otphp.git"
+  }
+],
+"require": {
+  "foyer/otphp": "dev-master"
+}
+```
+
+then run composer to install dependecy
+`composer require foyer/otphp:dev-master`
 
 ## Use
 
@@ -42,6 +56,12 @@ Note : This project has not been updated since it was created. If you need a PHP
     // OTP verified with a counter
     $totp->verify(316439, 1401); // => true
     $totp->verify(316439, 1402); // => false
+
+### Options available are
+
+    interval // in seconds for the validaity of the otp
+    digest // Type of algorithm to be used in hash_hmac
+    digits // No of OTP digits
 
 ### Google Authenticator Compatible
 
