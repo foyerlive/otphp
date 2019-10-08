@@ -21,6 +21,10 @@
  */
 
 namespace OTPHP {
+
+  // Force include Base32 dependecy
+  include dirname(__FILE__).'/base32.php';
+
 /**
  * One Time Password Generator 
  * 
